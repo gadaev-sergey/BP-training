@@ -1,0 +1,43 @@
+.persuade {
+  padding: var(--section-p);
+
+  &__text-wrapper {
+    margin-bottom: 30px;
+    padding: 35px 0;
+
+    background-image: url('../img/persuade-emoji.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    max-width: 60%;
+  }
+
+  &__desc {
+    max-width: 40%;
+
+    font-size: 16px;
+    line-height: 19px;
+    font-feature-settings: "pnum" on, "lnum" on;
+  }
+
+  &__img-wrapper {
+    width: 100%;
+
+    font-size: 0;
+
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+
+@media(max-width: 567px) {
+  .persuade {
+    &__title,
+    &__desc {
+      max-width: none;
+    }
+  }
+}

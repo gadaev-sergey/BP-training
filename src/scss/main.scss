@@ -1,0 +1,24 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения элементов компонентов
+@import "./components/ui-kit";
+@import "./components/sg-accordion";
+@import "./components/social-networks";
+@import "./components/modal-phone";
+@import "./components/yc-btn";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/simply";
+@import "./components/persuade";
+@import "./components/worker";
+@import "./components/gallery";
+@import "./components/profitable";
+@import "./components/courses";
+@import "./components/beside";
+@import "./components/footer";

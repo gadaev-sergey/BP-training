@@ -1,0 +1,117 @@
+.beside {
+  padding: var(--section-p);
+
+  &__container {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 16px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 430px 1fr;
+    gap: 30px;
+  }
+
+  &__desc {
+    margin-bottom: 50px;
+    font-feature-settings: "pnum" on, "lnum" on;
+  }
+
+  &__btn-main,
+  &__btn-whatsapp {
+    width: 100%;
+    max-width: 288px;
+  }
+
+  &__btn-main {
+    margin-bottom: 8px;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__btn-whatsapp {
+    & .icon {
+      margin-right: 10px;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+
+    background-color: gray;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+
+.beside__map {
+  & [class*="copyrights-pane"] {
+    display: none !important;
+  }
+
+  // & [class*="ground-pane"] {
+  //   filter: grayscale(1);
+  // }
+}
+
+@media(max-width: 990px) {
+  .beside {
+
+    &__wrapper {
+      display: block;
+    }
+
+    &__desc {
+      margin-bottom: 16px;
+    }
+
+    &__col2 {
+      margin-bottom: 16px;
+      height: 400px;
+    }
+
+    &__btn-main {
+      &--mobile {
+        display: block;
+      }
+      &--desktop {
+        display: none;
+      }
+    }
+
+    &__btn-whatsapp {
+      &--mobile {
+        display: block;
+      }
+      &--desktop {
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .beside {
+    &__container {
+      padding: 24px 16px;
+    }
+  }
+}
+
+@media(max-width: 480px) {
+  .beside {
+
+    &__btn-main,
+    &__btn-whatsapp {
+      max-width: none;
+    }
+  }
+}

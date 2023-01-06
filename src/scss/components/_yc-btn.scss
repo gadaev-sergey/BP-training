@@ -1,0 +1,51 @@
+.yc-btn {
+  position: fixed;
+  right: 4%;
+  bottom: 4%;
+  z-index: 50;
+
+  &__wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__btn {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+    background: url(../img/yc-btn.png);
+    background-size: cover;
+    box-shadow: 0 0 20px rgb(0, 122, 204, .9);
+
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 100px rgb(0 0 0 / 90%);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      z-index: -1;
+
+      display: block;
+
+      background-color: rgb(90, 90, 90);
+      border: 3px solid #fff;
+      border-radius: 50%;
+
+      animation: yc 1s linear infinite;
+    }
+  }
+}
+
+@keyframes yc {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

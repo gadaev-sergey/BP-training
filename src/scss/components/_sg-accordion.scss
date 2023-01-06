@@ -1,0 +1,159 @@
+.sg-accordion {
+  margin: 0 auto;
+  max-width: 745px;
+
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+
+  &--modal {
+    margin: 0;
+  }
+
+  &__wrapper {
+    background-color: var(--grey-600);
+    border-radius: 10px;
+
+    transition: background .2s ease-in-out;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &--open {
+      background-color: var(--grey-500);
+    }
+  }
+
+  &__header {
+    padding: 20px 16px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--grey-200);
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: background .2s ease-in-out;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid var(--color-bg-grey);
+    }
+
+    &--open {
+
+      & .sg-accordion__title {
+        color: #fff;
+      }
+
+      & .sg-accordion__icon {
+        fill: #fff;
+        transform: rotate(180deg);
+      }
+    }
+
+    &:focus {
+      outline: none;
+      color: white;
+    }
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      color: var(--grey-100);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    width: max-content;
+
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+
+
+    transition: color .2s ease-in-out;
+
+    &--modal {
+      font-weight: 500;
+      text-transform: none;
+    }
+  }
+
+  &__icon {
+    width: 12px;
+    height: 6px;
+
+    fill: #7e7e7e;
+
+    transform: rotate(0);
+    transition: transform .2s ease-in-out, fill .2s ease-in-out;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    border-radius: 10px;
+
+    transition: max-height .2s ease-in-out;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 5px 16px 16px 16px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: white;
+
+    &--list {
+      padding-bottom: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding-bottom: 16px;
+
+    color: white;
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+    margin-right: 16px;
+    margin-left: 16px;
+
+    & .icon {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sg-accordion {
+
+    &__header {
+      padding: 16px 18px;
+    }
+
+    &__text {
+      padding: 16px 18px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.social-networks {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__link {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--grey-600);
+    border-radius: 8px;
+
+    transition: background .2s ease-in-out;
+
+    & .icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    &--vk {
+      &:focus {
+        background-color: var(--color-vk);
+      }
+      &:hover {
+        background-color: var(--color-vk);
+      }
+    }
+
+    &--telegram {
+      &:focus {
+        background-color: var(--color-telegram);
+      }
+      &:hover {
+        background-color: var(--color-telegram);
+      }
+    }
+
+    &--whatsapp {
+      &:focus {
+        background-color: var(--green);
+      }
+      &:hover {
+        background-color: var(--green);
+      }
+    }
+
+    &--youtube {
+      &:focus {
+        background-color: var(--color-youtube);
+      }
+      &:hover {
+        background-color: var(--color-youtube);
+      }
+    }
+  }
+}

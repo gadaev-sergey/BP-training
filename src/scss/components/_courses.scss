@@ -1,0 +1,133 @@
+.courses {
+  padding: var(--section-p);
+
+  &__text-wrapper {
+    padding-top: 24px;
+    padding-right: 100px;
+    padding-bottom: 28px;
+    margin-bottom: 50px;
+
+    background-image: url('../img/courses-main-emoji.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__title {
+    max-width: 470px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    // grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+.courses-card {
+  padding: 24px;
+
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #FFFFFF;
+
+  background: #3E3E42;
+  border-radius: 8px;
+
+  &__title-wrapper {
+    margin-bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+  }
+
+  &__img-wrapper {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 16px;
+    max-width: 242px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__bot-wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__advantage {
+    padding: 5px;
+    padding-left: 8px;
+    width: max-content;
+    display: flex;
+    gap: 8px;
+
+    background: #2D2D30;
+    border-radius: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__price {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    text-align: right;
+
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+
+    &--through {
+      font-size: 18px;
+      line-height: 22px;
+      text-decoration-line: line-through;
+      text-transform: uppercase;
+      color: var(--grey-200);
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media(max-width: 440px) {
+  .courses {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .courses-card {
+    &__title {
+      font-size: 18px;
+    }
+  }
+}
